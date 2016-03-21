@@ -13,6 +13,8 @@
         {% if not lp27_settings.COMPRESS_ENABLED %}
             <script type="text/javascript" src="{% static 'lp27_app/js/less.js' %}"></script>
         {% endif %}
+        <script type="text/javascript" src="{% static 'lp27_app/js/jquery-1.11.0.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'lp27_app/js/home.js' %}"></script>
     </head>
     <body>
         <div class="header">
@@ -23,7 +25,7 @@
         <div class="logos">
             <div class="text1">Oferty pracy dopasowane przez rekrutera</div>
             <div class="text2">Całkowicie <span class="blue">za darmo</span></div>
-            <a href="#">Jak to działa?</a>
+            <a class="how-it-works">Jak to działa?</a>
         </div>
         <div class="flow">
             <div class="text3">
