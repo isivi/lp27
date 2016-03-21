@@ -4,6 +4,7 @@ DEBUG = False
 
 ALLOWED_HOSTS += [
     'goodjobs.isivi.pl',
+    'goodjobs.pl'
 ]
 
 
