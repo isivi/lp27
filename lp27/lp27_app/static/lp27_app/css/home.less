@@ -1,0 +1,185 @@
+@img-path: '../img/';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Open Sans,Verdana,sans-serif;
+  color: #323c4d;
+
+  .header {
+    height: 70px;
+    background-color: #ededef;
+
+    .logo-container {
+      width: 980px;
+      margin: auto auto;
+      padding-top: 15px;
+
+      .logo {
+        margin-left: 10px;
+        width: 222px;
+        height: 45px;
+        background: url('@{img-path}/lp27_logo.png');
+      }
+    }
+  }
+
+  .logos {
+    height: 530px;
+    text-align: center;
+    background: url('@{img-path}/lp27_firmy.png') no-repeat center center;
+
+    .text1 {
+      padding-top: 195px;
+      font-size: 34px;
+      font-weight: 700;
+    }
+
+    .text2 {
+      margin-top: 16px;
+      font-size: 26px;
+      color: #323c4d;
+      font-weight: 600;
+
+      .blue {
+        color: #1d78aa;
+      }
+    }
+
+    a {
+      margin-top: 40px;
+      display: inline-block;
+      height: 25px;
+      width: 195px;
+      background-color: #1d78aa;
+      color: white;
+      border: 0;
+      border-radius: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 12px 0;
+      font-weight: 600;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .flow {
+    height: 345px;
+    background-color: #f8f8f8;
+    text-align: center;
+
+    .text3 {
+      padding-top: 47px;
+      font-size: 23px;
+
+      .good {
+        font-weight: 600;
+        color: #1d78aa;
+      }
+
+      .jobs {
+        font-weight: 600;
+      }
+    }
+
+    .flow-points-container {
+      width: 600px;
+      margin: 30px auto 0 auto;
+
+      .points {
+        float: left;
+        display: inline-block;
+        width: 38px;
+        height: 155px;
+        background: url('@{img-path}/lp27_numerki.png');
+      }
+
+      .flow-explanation {
+        float: left;
+        display: inline-block;
+        width: 550px;
+
+        .point {
+          margin-left: 20px;
+          text-align: left;
+          font-weight: 600;
+
+          &.point1 {
+            margin-top: 8px;
+          }
+
+          &.point2 {
+            margin-top: 33px;
+          }
+
+          &.point3 {
+            margin-top: 33px;
+          }
+        }
+      }
+    }
+  }
+
+  .typeform {
+    height: 600px;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 50px 0;
+
+    iframe#typeform-frame {
+      border: 1px solid rgb(220, 220, 220);
+      border-radius: 2px;
+    }
+  }
+
+  .proofs {
+    height: 810px;
+    text-align: center;
+
+    .text4 {
+      padding-top: 57px;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .media {
+      margin: 48px auto 0 auto;
+      width: 805px;
+      height: 172px;
+      background: url('@{img-path}/lp27_prasa.png') no-repeat;
+    }
+
+    .bar {
+      margin: 65px auto 80px auto;
+      height: 1px;
+      width: 870px;
+      background-color: #ececec;
+    }
+
+    .wins {
+      margin: auto auto;
+      width: 887px;
+      height: 205px;
+      background: url('@{img-path}/lp27_laury.png');
+    }
+  }
+
+  .footer {
+    height: 80px;
+    position: relative;
+    background-color: #323c4d;
+
+    .copy {
+      position: absolute;
+      color: white;
+      width: 970px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+}
