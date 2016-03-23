@@ -27,7 +27,7 @@ body {
   .logos {
     height: 530px;
     text-align: center;
-    background: url('@{img-path}/lp27_firmy.png') no-repeat center center;
+    background: url('@{img-path}/lp27_firmy.png') center center;
 
     .text1 {
       padding-top: 195px;
@@ -67,60 +67,79 @@ body {
     }
   }
 
-  .flow {
-    height: 345px;
+  .flow1 {
     background-color: #f8f8f8;
-    text-align: center;
+    overflow: auto;
 
-    .text3 {
-      padding-top: 47px;
-      font-size: 23px;
+    .block-left {
+      width: 50%;
+      float: left;
+      height: 430px;
+      background: url('@{img-path}/lp27_zdj1.png') center center;
+      background-size: cover;
+    }
 
-      .good {
-        font-weight: 600;
-        color: #1d78aa;
+    .block-right {
+      width: 50%;
+      float: left;
+      height: 430px;
+      background-color: #f7f7f7;
+
+      .copy {
+        width: 460px;
+
+        .text1 {
+          padding-left: 30px;
+          padding-top: 95px;
+          font-size: 50px;
+          font-weight: 300;
+          line-height: 1.2em;
+        }
+
+        .text2 {
+          padding-left: 30px;
+          padding-top: 38px;
+          font-size: 18px;
+        }
       }
+    }
+  }
 
-      .jobs {
-        font-weight: 600;
+  .flow2 {
+    background-color: #f8f8f8;
+    overflow: auto;
+
+    .block-left {
+      width: 50%;
+      float: left;
+      height: 430px;
+
+      .copy {
+        float: right;
+        width: 460px;
+
+        .text1 {
+          padding-right: 30px;
+          padding-top: 120px;
+          font-size: 50px;
+          font-weight: 300;
+          line-height: 1.2em;
+        }
+
+        .text2 {
+          padding-right: 30px;
+          padding-top: 38px;
+          font-size: 18px;
+        }
       }
     }
 
-    .flow-points-container {
-      width: 600px;
-      margin: 30px auto 0 auto;
-
-      .points {
-        float: left;
-        display: inline-block;
-        width: 38px;
-        height: 155px;
-        background: url('@{img-path}/lp27_numerki.png');
-      }
-
-      .flow-explanation {
-        float: left;
-        display: inline-block;
-        width: 550px;
-
-        .point {
-          margin-left: 20px;
-          text-align: left;
-          font-weight: 600;
-
-          &.point1 {
-            margin-top: 8px;
-          }
-
-          &.point2 {
-            margin-top: 33px;
-          }
-
-          &.point3 {
-            margin-top: 33px;
-          }
-        }
-      }
+    .block-right {
+      width: 50%;
+      float: left;
+      height: 430px;
+      background: url('@{img-path}/lp27_zdj2.png') center center;
+      background-size: cover;
     }
   }
 

@@ -1,9 +1,9 @@
-var scrollToForm = function() {
+var scrollToFlow = function() {
     $('html, body').animate({
-        scrollTop: ($('.typeform').offset().top)
-    }, 1500);
+        scrollTop: ($('.flow1').offset().top)
+    }, 1200);
 };
 
 $(function() {
-    $('.how-it-works').click(scrollToForm);
+    $('.how-it-works').click(scrollToFlow);
 });
