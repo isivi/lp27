@@ -1,6 +1,6 @@
 var scrollToFlow = function() {
     $('html, body').animate({
-        scrollTop: ($('.flow1').offset().top)
+        scrollTop: ($('.feature-start').offset().top)
     }, 1200);
 };
 

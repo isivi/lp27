@@ -23,16 +23,24 @@
             </div>
         </div>
         <div class="logos">
-            <div class="text1">Oferty pracy dopasowane przez rekrutera</div>
+            <div class="text1"
+                    {% if landing_version_a %}
+                        style="padding-top: 173px;"
+                    {% else %}
+                        style="padding-top: 145px;"
+                    {% endif %}>
+                Oferty pracy dopasowane {% if landing_version_a %}przez rekrutera{% else %}<br/>przez algorytm kolejnej generacji{% endif %}
+            </div>
             <div class="text2">Całkowicie <span class="blue">za darmo</span></div>
             <a class="how-it-works">Jak to działa?</a>
         </div>
-        <div class="flow1">
+        {% if landing_version_a %}
+        <div class="feature1 feature-start">
             <div class="block-left"></div>
             <div class="block-right">
                 <div class="copy">
                     <div class="text1">
-                        Prefesjonalny rekruter
+                        Profesjonalny rekruter
                     </div>
                     <div class="text2">
                         Dzięki doświadczonemu rekruterowi<br/>
@@ -42,7 +50,7 @@
                 </div>
             </div>
         </div>
-        <div class="flow2">
+        <div class="feature2">
             <div class="block-left">
                 <div class="copy">
                     <div class="text1">
@@ -56,6 +64,42 @@
             </div>
             <div class="block-right"></div>
         </div>
+        {% else %}
+        <div class="feature3 feature-start">
+            <div class="block-left">
+                <div class="algorithm"></div>
+            </div>
+            <div class="block-right">
+                <div class="copy">
+                    <div class="text1">
+                        Algorytm jak żaden inny
+                    </div>
+                    <div class="text2">
+                        Analizując Twoje preferencje oraz CV algorytm
+                        znajdzie oferty prawdziwie dopasowane do Ciebie.
+                        Wypełnij krótki formularz. My zajmiemy się resztą.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature4">
+            <div class="block-left">
+                <div class="copy">
+                    <div class="text1">
+                        Koniec ze spamem
+                    </div>
+                    <div class="text2">
+                        Nikt nie lubi spamu. Nasz algorytm pracuje cały czas,
+                        ale odzywamy się tylko, jeżeli znajdziemy
+                        ofertę specjalnie dla Ciebie.
+                    </div>
+                </div>
+            </div>
+            <div class="block-right">
+                <div class="letter"></div>
+            </div>
+        </div>
+        {% endif %}
         <div class="typeform">
              <iframe id="typeform-frame" src="https://damian37.typeform.com/to/Szm4kg" height="600" width="900">
              </iframe>
