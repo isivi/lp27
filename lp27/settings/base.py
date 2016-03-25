@@ -30,6 +30,11 @@ ALLOWED_HOSTS = [
     '127.0.0.1'
 ]
 
+# App functions
+FUNCTIONS = {
+    'ANALYTICS_TRACKING_SCRIPT': False,
+    'HOTJAR_TRACKING_SCRIPT': False,
+}
 
 # Application definition
 
@@ -147,6 +152,10 @@ TEMPLATES = [
         }
     },
 ]
+
+
+# No Stats functionality
+NO_STATS_COOKIE_NAME = 'nostats'
 
 
 # Compressor

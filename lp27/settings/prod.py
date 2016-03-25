@@ -7,6 +7,9 @@ ALLOWED_HOSTS += [
     'goodjobs.pl'
 ]
 
+FUNCTIONS['ANALYTICS_TRACKING_SCRIPT'] = True
+FUNCTIONS['HOTJAR_TRACKING_SCRIPT'] = True
+
 
 # Compressor
 

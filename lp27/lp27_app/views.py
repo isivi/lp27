@@ -1,9 +1,10 @@
 import random
 
-from django.shortcuts import render_to_response
+from django.conf import settings
+from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
 
-from lp27.utils.cookies import set_cookie
+from lp27.utils.cookies import set_cookie, delete_cookie
 from lp27.utils.str import str_to_bool
 
 
@@ -19,4 +20,18 @@ def home(request):
     context = {'landing_version_a': landing_version_a}
     response = render_to_response(template, context, context_instance=RequestContext(request))
     set_cookie(response, 'landing_version_a', landing_version_a)
+    return response
+
+
+# Stats
+
+def no_stats(request):
+    response = redirect('home')
+    set_cookie(response, key=settings.NO_STATS_COOKIE_NAME, value=1)
+    return response
+
+
+def stats(request):
+    response = redirect('home')
+    delete_cookie(response, key=settings.NO_STATS_COOKIE_NAME)
     return response
