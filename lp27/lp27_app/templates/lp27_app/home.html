@@ -101,8 +101,14 @@
         </div>
         {% endif %}
         <div class="typeform">
-             <iframe id="typeform-frame" src="https://damian37.typeform.com/to/Szm4kg" height="600" width="900">
-             </iframe>
+            <iframe id="typeform-frame" height="600" width="900"
+                {% if landing_version_a %}
+                    src="https://konrad11.typeform.com/to/jYRX0U"
+                {% else %}
+                    src="https://konrad11.typeform.com/to/dtFfhu"
+                {% endif %}
+                >
+            </iframe>
         </div>
         <div class="proofs">
             <div class="text4">
