@@ -317,4 +317,99 @@ body {
       }
     }
   }
+
+  .block4 {
+    background-color: #6485ff;
+    height: 338px;
+
+    .container {
+      width: 1000px;
+      margin: auto auto;
+      text-align: center;
+      padding-top: 100px;
+
+      span {
+        font-size: 38px;
+        color: #ffffff;
+      }
+
+      form {
+        text-align: center;
+        margin-top: 30px;
+
+        ::-webkit-input-placeholder {
+          color: #ffffff;
+          font-size: 16px;
+          opacity: 0.8;
+          letter-spacing: 2px;
+        }
+
+        :-moz-placeholder { /* Firefox 18- */
+          color: #ffffff;
+          font-size: 16px;
+          opacity: 0.8;
+          letter-spacing: 2px;
+        }
+
+        ::-moz-placeholder {  /* Firefox 19+ */
+          color: #ffffff;
+          font-size: 16px;
+          opacity: 0.8;
+          letter-spacing: 2px;
+        }
+
+        :-ms-input-placeholder {
+          color: #ffffff;
+          font-size: 16px;
+          opacity: 0.8;
+          letter-spacing: 2px;
+        }
+
+        input[type="text"] {
+          border: 2px solid #ffffff;
+          padding: 18px 25px;
+          background-color: rgba(256, 256, 256, 0.2);
+          border-radius: 2px;
+          font-size: 16px;
+          letter-spacing: 2px;
+          color: #ffffff;
+          width: 480px;
+
+          &:hover {
+            background-color: #ffffff;
+            color: #003968;
+          }
+        }
+
+        button {
+          margin-left: 20px;
+          padding: 20px 35px 20px 25px;
+          display: inline-block;
+          font-size: 15px;
+          text-transform: uppercase;
+          color: #ffffff;
+          background-color: #242f3f;
+          border: none;
+          border-radius: 2px;
+          letter-spacing: 1px;
+
+          &:hover {
+            background-color: #ffffff;
+            color: #003968;
+            cursor: pointer;
+          }
+
+          .arrow {
+            position: relative;
+            top: 1px;
+            left: 10px;
+            display: inline-block;
+            background: url('@{img-path}/strzalka_biala_button_duzy.png') center center;
+            width: 10px;
+            height: 15px;
+          }
+        }
+      }
+    }
+  }
 }
