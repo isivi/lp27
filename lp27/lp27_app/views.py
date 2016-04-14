@@ -15,6 +15,13 @@ def home(request):
     return response
 
 
+def typeform(request):
+    template = 'lp27_app/typeform.html'
+    context = {}
+    response = render_to_response(template, context, context_instance=RequestContext(request))
+    return response
+
+
 def lp1(request):
     landing_version_a = request.COOKIES.get('landing_version_a', None)
 
