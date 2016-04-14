@@ -9,6 +9,13 @@ from lp27.utils.str import str_to_bool
 
 
 def home(request):
+    template = 'lp27_app/home.html'
+    context = {}
+    response = render_to_response(template, context, context_instance=RequestContext(request))
+    return response
+
+
+def lp1(request):
     landing_version_a = request.COOKIES.get('landing_version_a', None)
 
     if landing_version_a is None:
@@ -31,7 +38,7 @@ def recruiter(request):
         landing_version_a = str_to_bool(landing_version_a)
 
     if landing_version_a:
-        template = 'lp27_app/home.html'
+        template = 'lp27_app/lp1.html'
         context = {'landing_version_a': landing_version_a}
         response = render_to_response(template, context, context_instance=RequestContext(request))
         set_cookie(response, 'landing_version_a', landing_version_a)
@@ -51,7 +58,7 @@ def algorithm(request):
     if landing_version_a:
         return redirect('recruiter')
     else:
-        template = 'lp27_app/home.html'
+        template = 'lp27_app/lp1.html'
         context = {'landing_version_a': landing_version_a}
         response = render_to_response(template, context, context_instance=RequestContext(request))
         set_cookie(response, 'landing_version_a', landing_version_a)

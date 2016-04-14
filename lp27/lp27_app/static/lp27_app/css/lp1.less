@@ -1,0 +1,291 @@
+@img-path: '../img/';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Open Sans,Verdana,sans-serif;
+  color: #323c4d;
+
+  .header {
+    height: 70px;
+    background-color: #ededef;
+
+    .logo-container {
+      width: 980px;
+      margin: auto auto;
+      padding-top: 15px;
+
+      .logo {
+        margin-left: 10px;
+        width: 222px;
+        height: 45px;
+        background: url('@{img-path}/lp27_logo.png');
+      }
+    }
+  }
+
+  .logos {
+    height: 530px;
+    text-align: center;
+    background: url('@{img-path}/lp27_firmy.png') center center;
+
+    .text1 {
+      padding-top: 173px;
+      font-size: 42px;
+      font-weight: 700;
+    }
+
+    .text2 {
+      margin-top: 16px;
+      font-size: 26px;
+      color: #323c4d;
+      font-weight: 600;
+
+      .blue {
+        color: #1d78aa;
+      }
+    }
+
+    a {
+      margin-top: 40px;
+      display: inline-block;
+      height: 25px;
+      width: 195px;
+      background-color: #1d78aa;
+      color: white;
+      border: 0;
+      border-radius: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 12px 0;
+      font-weight: 600;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .feature1 {
+    background-color: #f8f8f8;
+    overflow: auto;
+
+    .block-left {
+      width: 50%;
+      float: left;
+      height: 430px;
+      background: url('@{img-path}/lp27_zdj1.png') top;
+      background-size: cover;
+    }
+
+    .block-right {
+      width: 50%;
+      float: left;
+      height: 430px;
+      background-color: #f7f7f7;
+
+      .copy {
+        width: 475px;
+
+        .text1 {
+          padding-left: 50px;
+          padding-top: 95px;
+          font-size: 50px;
+          font-weight: 300;
+          line-height: 1.2em;
+        }
+
+        .text2 {
+          padding-left: 50px;
+          padding-top: 38px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .feature2 {
+    overflow: auto;
+
+    .block-left {
+      width: 50%;
+      float: left;
+      height: 430px;
+
+      .copy {
+        float: right;
+        width: 475px;
+
+        .text1 {
+          padding-right: 50px;
+          padding-top: 120px;
+          font-size: 50px;
+          font-weight: 300;
+          line-height: 1.2em;
+        }
+
+        .text2 {
+          padding-right: 50px;
+          padding-top: 38px;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .block-right {
+      width: 50%;
+      float: left;
+      height: 430px;
+      background: url('@{img-path}/lp27_zdj2.jpg') top;
+      background-size: cover;
+    }
+  }
+
+  .feature3 {
+    background-color: #f8f8f8;
+    overflow: auto;
+
+    .block-left {
+      width: 50%;
+      float: left;
+      height: 430px;
+
+      .algorithm {
+        margin-top: 43px;
+        margin-right: 40px;
+        float: right;
+        width: 376px;
+        height: 344px;
+        background: url('@{img-path}/algorytm.png');
+      }
+    }
+
+    .block-right {
+      width: 50%;
+      float: left;
+      height: 430px;
+      background-color: #f7f7f7;
+
+      .copy {
+        width: 460px;
+
+        .text1 {
+          padding-left: 40px;
+          padding-top: 80px;
+          font-size: 50px;
+          font-weight: 300;
+          line-height: 1.2em;
+        }
+
+        .text2 {
+          padding-left: 40px;
+          padding-top: 38px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .feature4 {
+    overflow: auto;
+
+    .block-left {
+      width: 50%;
+      float: left;
+      height: 430px;
+
+      .copy {
+        float: right;
+        width: 485px;
+
+        .text1 {
+          padding-right: 30px;
+          padding-top: 125px;
+          font-size: 50px;
+          font-weight: 300;
+          line-height: 1.2em;
+        }
+
+        .text2 {
+          padding-right: 30px;
+          padding-top: 38px;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .block-right {
+      width: 50%;
+      height: 430px;
+      float: left;
+
+      .letter {
+        margin-top: 120px;
+        margin-left: 135px;
+        width: 235px;
+        height: 188px;
+        background: url('@{img-path}/koperta.png');
+      }
+    }
+  }
+
+  .typeform {
+    height: 600px;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 50px 0;
+
+    iframe#typeform-frame {
+      border: 1px solid rgb(220, 220, 220);
+      border-radius: 2px;
+    }
+  }
+
+  .proofs {
+    height: 810px;
+    text-align: center;
+
+    .text4 {
+      padding-top: 57px;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .media {
+      margin: 48px auto 0 auto;
+      width: 805px;
+      height: 172px;
+      background: url('@{img-path}/lp27_prasa.png') no-repeat;
+    }
+
+    .bar {
+      margin: 65px auto 80px auto;
+      height: 1px;
+      width: 870px;
+      background-color: #ececec;
+    }
+
+    .wins {
+      margin: auto auto;
+      width: 887px;
+      height: 205px;
+      background: url('@{img-path}/lp27_laury.png');
+    }
+  }
+
+  .footer {
+    height: 80px;
+    position: relative;
+    background-color: #323c4d;
+
+    .copy {
+      position: absolute;
+      color: white;
+      width: 970px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+}

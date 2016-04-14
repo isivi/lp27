@@ -17,112 +17,24 @@
         <script type="text/javascript" src="{% static 'lp27_app/js/home.js' %}"></script>
     </head>
     <body>
-        <div class="header">
-            <div class="logo-container">
-                <div class="logo"></div>
-            </div>
-        </div>
-        <div class="logos">
-            <div class="text1"
-                    {% if landing_version_a %}
-                        style="padding-top: 173px;"
-                    {% else %}
-                        style="padding-top: 145px;"
-                    {% endif %}>
-                Oferty pracy dopasowane {% if landing_version_a %}przez rekrutera{% else %}<br/>przez algorytm kolejnej generacji{% endif %}
-            </div>
-            <div class="text2">Całkowicie <span class="blue">za darmo</span></div>
-            <a class="how-it-works">Jak to działa?</a>
-        </div>
-        {% if landing_version_a %}
-        <div class="feature1 feature-start">
-            <div class="block-left"></div>
-            <div class="block-right">
-                <div class="copy">
-                    <div class="text1">
-                        Profesjonalny rekruter
-                    </div>
-                    <div class="text2">
-                        Dzięki doświadczonemu rekruterowi<br/>
-                        dostaniesz tylko prawdziwie dopasowane oferty.
-                        Wypełnij krótki formularz. My zajmiemy się resztą.
-                    </div>
+        <div class="landing-page">
+            <div class="container1">
+                <div class="navbar">
+                    <div class="logo"></div>
+                    <a class="go-to-form" href="https://konrad11.typeform.com/to/gEqdl9">Formularz</a>
+                    <a class="how-it-works">Jak to działa?</a>
                 </div>
-            </div>
-        </div>
-        <div class="feature2">
-            <div class="block-left">
-                <div class="copy">
-                    <div class="text1">
-                        Koniec ze spamem
-                    </div>
-                    <div class="text2">
-                        Nikt nie lubi spamu. Nasi rekruterzy pracują<br/>
-                        cały czas, ale odzywamy się tylko, jeżeli znajdziemy ofertę specjalnie dla Ciebie.
-                    </div>
+                <div class="text1">
+                    Oferty pracy dopasowane przez rekrutera
                 </div>
-            </div>
-            <div class="block-right"></div>
-        </div>
-        {% else %}
-        <div class="feature3 feature-start">
-            <div class="block-left">
-                <div class="algorithm"></div>
-            </div>
-            <div class="block-right">
-                <div class="copy">
-                    <div class="text1">
-                        Algorytm jak żaden inny
-                    </div>
-                    <div class="text2">
-                        Analizując Twoje preferencje oraz CV algorytm
-                        znajdzie oferty prawdziwie dopasowane do Ciebie.
-                        Wypełnij krótki formularz. My zajmiemy się resztą.
-                    </div>
-                </div>
+                <form>
+                    <input type="text" placeholder="Podaj e-mail"/>
+                    <button>Przechodzę do formularza<span class="arrow"></span></button>
+                </form>
+                <div class="arrow-down"></div>
             </div>
         </div>
-        <div class="feature4">
-            <div class="block-left">
-                <div class="copy">
-                    <div class="text1">
-                        Koniec ze spamem
-                    </div>
-                    <div class="text2">
-                        Nikt nie lubi spamu. Nasz algorytm pracuje cały czas,
-                        ale odzywamy się tylko, jeżeli znajdziemy
-                        ofertę specjalnie dla Ciebie.
-                    </div>
-                </div>
-            </div>
-            <div class="block-right">
-                <div class="letter"></div>
-            </div>
-        </div>
-        {% endif %}
-        <div class="typeform">
-            <iframe id="typeform-frame" height="600" width="900"
-                {% if landing_version_a %}
-                    src="https://konrad11.typeform.com/to/jYRX0U"
-                {% else %}
-                    src="https://konrad11.typeform.com/to/dtFfhu"
-                {% endif %}
-                >
-            </iframe>
-        </div>
-        <div class="proofs">
-            <div class="text4">
-                Pisali o nas
-            </div>
-            <div class="media"></div>
-            <div class="bar"></div>
-            <div class="wins"></div>
-        </div>
-        <div class="footer">
-            <div class="copy">
-                &copy; ISIVI 2016
-            </div>
-        </div>
+
 
         {% if lp27_settings.FUNCTIONS.ANALYTICS_TRACKING_SCRIPT and lp27_settings.is_stats_request %}
             {% include 'lp27_app/analytics_tracking.html' %}
