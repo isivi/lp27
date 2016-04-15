@@ -27,9 +27,10 @@
                 <div class="text1">
                     Oferty pracy dopasowane przez rekrutera
                 </div>
-                <form>
-                    <input type="text" placeholder="Podaj e-mail"/>
-                    <button>Przechodzę do formularza<span class="arrow"></span></button>
+                <form method="post" action="{% url 'typeform' %}">
+                    {% csrf_token %}
+                    {{ form.email }}
+                    <button id="first-submit-button">Przechodzę do formularza<span class="arrow"></span></button>
                 </form>
                 <div class="arrow-down"></div>
             </div>
@@ -81,9 +82,9 @@
             <div class="container">
                 <span>Wypełnij formularz i otrzymuj dopasowane oferty</span>
                 <form>
-                    <form>
-                        <input type="text" placeholder="Podaj e-mail"/>
-                        <button>Przechodzę do formularza<span class="arrow"></span></button>
+                    <form method="post" action="{% url 'typeform' %}">
+                        {{ form.email }}
+                        <button id="second-submit-button">Przechodzę do formularza<span class="arrow"></span></button>
                     </form>
                 </form>
             </div>

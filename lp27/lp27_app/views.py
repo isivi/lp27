@@ -4,18 +4,29 @@ from django.conf import settings
 from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
 
+from lp27.lp27_app.forms import EmailForm
+from lp27.lp27_app.models import Entry
 from lp27.utils.cookies import set_cookie, delete_cookie
 from lp27.utils.str import str_to_bool
 
 
 def home(request):
+    form = EmailForm()
+
     template = 'lp27_app/home.html'
-    context = {}
+    context = {'form': form}
     response = render_to_response(template, context, context_instance=RequestContext(request))
     return response
 
 
 def typeform(request):
+    if request.method == 'POST':
+        form = EmailForm(data=request.POST)
+
+        if form.is_valid():
+            email = form.cleaned_data.get('email')
+            Entry.objects.get_or_create(email=email)
+
     template = 'lp27_app/typeform.html'
     context = {}
     response = render_to_response(template, context, context_instance=RequestContext(request))
