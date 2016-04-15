@@ -15,6 +15,11 @@
         {% endif %}
         <script type="text/javascript" src="{% static 'lp27_app/js/jquery-1.11.0.min.js' %}"></script>
         <script type="text/javascript" src="{% static 'lp27_app/js/home.js' %}"></script>
+        <script>
+            var djangoTemplateContext = {
+                versionA: '{{ version_a }}' == 'True'
+            };
+        </script>
     </head>
     <body>
         <div class="landing-page">

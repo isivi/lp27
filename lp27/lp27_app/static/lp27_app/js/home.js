@@ -1,7 +1,14 @@
 $(function() {
   var scrollToFirstBlock = function() {
+    var element;
+    if (djangoTemplateContext.versionA) {
+      element = ".block1"
+    } else {
+      element = ".block2"
+    }
+
     $('html, body').animate({
-      scrollTop: $(".block1").offset().top
+      scrollTop: $(element).offset().top
     }, 1000);
   };
 
