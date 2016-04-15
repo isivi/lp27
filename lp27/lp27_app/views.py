@@ -11,12 +11,55 @@ from lp27.utils.str import str_to_bool
 
 
 def home(request):
-    form = EmailForm()
+    version_a = request.COOKIES.get('version_a', None)
 
-    template = 'lp27_app/home.html'
-    context = {'form': form}
-    response = render_to_response(template, context, context_instance=RequestContext(request))
-    return response
+    if version_a is None:
+        version_a = (random.random() > 0.5)
+    else:
+        version_a = str_to_bool(version_a)
+
+    if version_a:
+        return redirect('lp2_a')
+    else:
+        return redirect('lp2_b')
+
+
+def lp2_a(request):
+    version_a = request.COOKIES.get('version_a', None)
+
+    if version_a is None:
+        version_a = True
+    else:
+        version_a = str_to_bool(version_a)
+
+    if version_a:
+        form = EmailForm()
+        template = 'lp27_app/home.html'
+        context = {'form': form, 'version_a': True}
+        response = render_to_response(template, context, context_instance=RequestContext(request))
+        set_cookie(response, 'version_a', version_a)
+        return response
+    else:
+        return redirect('lp2_b')
+
+
+def lp2_b(request):
+    version_a = request.COOKIES.get('version_a', None)
+
+    if version_a is None:
+        version_a = False
+    else:
+        version_a = str_to_bool(version_a)
+
+    if version_a:
+        return redirect('lp2_a')
+    else:
+        form = EmailForm()
+        template = 'lp27_app/home.html'
+        context = {'form': form, 'version_a': False}
+        response = render_to_response(template, context, context_instance=RequestContext(request))
+        set_cookie(response, 'version_a', version_a)
+        return response
 
 
 def typeform(request):

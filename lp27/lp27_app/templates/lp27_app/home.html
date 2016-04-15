@@ -35,49 +35,14 @@
                 <div class="arrow-down"></div>
             </div>
         </div>
-        <div class="block1">
-            <div class="container-left">
-                <div class="img1"></div>
-            </div>
-            <div class="container-right">
-                <div class="text-container">
-                    <div class="text1">Doświadczony rekruter. Do tego osobisty.</div>
-                    <div class="text2">
-                        Jego wiedza i doświadczenie sprawią, że otrzymasz najlepiej dopasowane oferty. Wyróżnia nas
-                        indywidualne podejście do rekrutacji. Poznając Twoje preferencje, przedstawimy możliwości,
-                        których oczekujesz i zadbamy o skuteczną rekrutację.
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="block2">
-            <div class="container">
-                <div class="text-container">
-                    <div class="text1">Daj się poznać.</div>
-                    <div class="text2">
-                        W ciągu 48 godzin otrzymasz od nas powitalną wiadomość z pierwszymi ofertami pracy lub prośbą
-                        o uzupełniające informacje. Wszystko, co musisz zrobić, to wypełnić krótki formularz. Na jego
-                        podstawie przydzielimy Ci profesjonalnego rekrutera.
-                    </div>
-                    <a class="go-to-form">
-                        Przechodzę do formularza<span class="arrow-small"></span>
-                    </a>
-                </div>
-                <div class="img2"></div>
-            </div>
-        </div>
-        <div class="block3">
-            <div class="container">
-                <div class="img3"></div>
-                <div class="text-container">
-                    <div class="text1">Oferty pracy prosto na Twoją skrzynkę.</div>
-                    <div class="text2">
-                        Za każdym razem, gdy Twój rekruter znajdzie ofertę pracy dopasowaną do Ciebie, wyśle ją na
-                        Twoją skrzynkę mailową. Sam decydujesz, czy chcesz zaaplikować.
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% if version_a %}
+            {% include 'lp27_app/block1.html' %}
+            {% include 'lp27_app/block2.html' %}
+        {% else %}
+            {% include 'lp27_app/block2.html' %}
+            {% include 'lp27_app/block1.html' with version_a=version_a only %}
+        {% endif %}
+        {% include 'lp27_app/block3.html' %}
         <div class="block4">
             <div class="container">
                 <span>Wypełnij formularz i otrzymuj dopasowane oferty</span>

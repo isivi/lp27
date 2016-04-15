@@ -1,10 +1,12 @@
 from django.conf.urls import url
 
-from .views import home, typeform, lp1, recruiter, algorithm, no_stats, stats
+from .views import home, lp2_a, lp2_b, typeform, lp1, recruiter, algorithm, no_stats, stats
 
 urlpatterns = [
     # Second version of LP
     url(r'^$', home, name='home'),
+    url(r'^a/$', lp2_a, name='lp2_a'),
+    url(r'^b/$', lp2_b, name='lp2_b'),
     url(r'^formularz/$', typeform, name='typeform'),
 
     # First version of LP
