@@ -41,10 +41,10 @@
             </div>
         </div>
         {% if version_a %}
-            {% include 'lp27_app/block1.html' %}
-            {% include 'lp27_app/block2.html' %}
+            {% include 'lp27_app/block1.html' with version_a=version_a only %}
+            {% include 'lp27_app/block2.html' with version_a=version_a only %}
         {% else %}
-            {% include 'lp27_app/block2.html' %}
+            {% include 'lp27_app/block2.html' with version_a=version_a only %}
             {% include 'lp27_app/block1.html' with version_a=version_a only %}
         {% endif %}
         {% include 'lp27_app/block3.html' %}
